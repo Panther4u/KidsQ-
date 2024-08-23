@@ -33,28 +33,28 @@ const ShopArea = ({ all_products, products, otherProps }) => {
       <section className="tp-shop-area pb-120">
         <div className="container">
           <div className="row">
-            <div className="col-xl-3 col-lg-4">
-              <div className="tp-shop-sidebar mr-10">
-                {/* filter */}
+             {/* <div className="col-xl-3 col-lg-4"> 
+               <div className="tp-shop-sidebar mr-10">
+
                 <PriceFilter
                   priceFilterValues={priceFilterValues}
                   maxPrice={maxPrice}
                 />
-                {/* status */}
+
                 <StatusFilter setCurrPage={setCurrPage} />
-                {/* categories */}
+  
                 <CategoryFilter setCurrPage={setCurrPage} />
-                {/* color */}
+  
                 <ColorFilter setCurrPage={setCurrPage} />
-                {/* product rating */}
+    
                 <TopRatedProducts />
-                {/* brand */}
+
                 <ProductBrand setCurrPage={setCurrPage} />
-                {/* reset filter */}
+
                 <ResetButton/>
-              </div>
-            </div>
-            <div className="col-xl-9 col-lg-8">
+              </div> 
+            </div> */}
+            <div className="col-xl-12 col-lg-12">
               <div className="tp-shop-main-wrapper">
                 <div className="tp-shop-top mb-45">
                   <div className="row">
@@ -93,7 +93,7 @@ const ShopArea = ({ all_products, products, otherProps }) => {
                             .map((item) => (
                               <div
                                 key={item._id}
-                                className="col-xl-4 col-md-6 col-sm-6"
+                                className="g-1 col-xl-3 col-md-4 col-lg-3 col-sm-6 col-6"
                               >
                                 <ProductItem product={item} />
                               </div>

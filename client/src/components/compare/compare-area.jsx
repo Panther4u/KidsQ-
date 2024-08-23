@@ -11,11 +11,15 @@ const CompareArea = () => {
   const { compareItems } = useSelector((state) => state.compare);
   const dispatch = useDispatch();
 
+  // Limit the number of compare items to 6
+  const limitedCompareItems = compareItems.slice(0, 6);
+
   // handle add product
   const handleAddProduct = (prd) => {
     dispatch(add_cart_product(prd));
   };
-  // handle add product
+
+  // handle remove compare product
   const handleRemoveComparePrd = (prd) => {
     dispatch(remove_compare_product(prd));
   };
@@ -30,7 +34,7 @@ const CompareArea = () => {
                 <div className="text-center pt-50">
                   <h3>No Compare Items Found</h3>
                   <Link href="/shop" className="tp-cart-checkout-btn mt-20">
-                    Continue Shipping
+                    Continue Shopping
                   </Link>
                 </div>
               )}
@@ -40,8 +44,8 @@ const CompareArea = () => {
                     <tbody>
                       <tr>
                         <th>Product</th>
-                        {compareItems.map(item => (
-                          <td key={item._id} className="">
+                        {limitedCompareItems.map(item => (
+                          <td key={item._id}>
                             <div className="tp-compare-thumb">
                               <Image
                                 src={item.img}
@@ -61,7 +65,7 @@ const CompareArea = () => {
                       {/* Description */}
                       <tr>
                         <th>Description</th>
-                        {compareItems.map(item => (
+                        {limitedCompareItems.map(item => (
                           <td key={item._id}>
                             <div className="tp-compare-desc">
                               <p>
@@ -75,7 +79,7 @@ const CompareArea = () => {
                       {/* Price */}
                       <tr>
                         <th>Price</th>
-                        {compareItems.map(item => (
+                        {limitedCompareItems.map(item => (
                           <td key={item._id}>
                             <div className="tp-compare-price">
                               <span>₹{item.price.toFixed(2)}</span>
@@ -83,10 +87,10 @@ const CompareArea = () => {
                           </td>
                         ))}
                       </tr>
-                      {/* Add to cart*/}
+                      {/* Add to cart */}
                       <tr>
                         <th>Add to cart</th>
-                        {compareItems.map(item => (
+                        {limitedCompareItems.map(item => (
                           <td key={item._id}>
                             <div className="tp-compare-add-to-cart">
                               <button onClick={() => handleAddProduct(item)} type="button" className="tp-btn">
@@ -99,7 +103,7 @@ const CompareArea = () => {
                       {/* Rating */}
                       <tr>
                         <th>Rating</th>
-                        {compareItems.map(item => (
+                        {limitedCompareItems.map(item => (
                           <td key={item._id}>
                             <div className="tp-compare-rating">
                               <Rating
@@ -115,10 +119,10 @@ const CompareArea = () => {
                       {/* Remove */}
                       <tr>
                         <th>Remove</th>
-                        {compareItems.map(item => (
+                        {limitedCompareItems.map(item => (
                           <td key={item._id}>
                             <div className="tp-compare-remove">
-                              <button onClick={()=>handleRemoveComparePrd({title:item.title,id:item._id })}>
+                              <button onClick={() => handleRemoveComparePrd({title:item.title,id:item._id })}>
                                 <i className="fal fa-trash-alt"></i>
                               </button>
                             </div>

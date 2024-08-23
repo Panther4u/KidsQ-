@@ -42,15 +42,6 @@ const menu_data = [
         title: 'Shop Page',
         link: '/shop',
         mega_menus: [
-          { title: 'Only Categories', link: '/shop-category' },
-          { title: 'Shop Grid with Sideber', link: '/shop' },
-          { title: 'Product Details', link: '/product-details' },
-        ]
-      },
-      {
-        title: 'Products',
-        link: '/product-details',
-        mega_menus: [
           { title: 'Product Simple', link: '/product-details' },
           { title: 'With Video', link: '/product-details-video' },
           { title: 'With Countdown Timer', link: '/product-details-countdown' },
@@ -58,45 +49,56 @@ const menu_data = [
         ]
       },
       {
-        title: 'eCommerce',
-        link: '/shop',
+        title: 'Products',
+        link: '/product-details',
         mega_menus: [
-          { title: 'Shopping Cart', link: '/cart' },
-          { title: 'Compare', link: '/compare' },
-          { title: 'Wishlist', link: '/wishlist' },
-          { title: 'Checkout', link: '/checkout' },
-          { title: 'My account', link: '/profile' },
+          { title: 'All Products', link: '/shop' },
+          { title: 'Only Categories', link: '/shop-category' },
+          { title: 'Sports T- Short', link: '/product-details' },
+          { title: 'regular uniform', link: '/shop-category' },
+          { title: 'Accessories', link: '/shop' },
         ]
       },
       {
-        title: 'More Pages',
+        title: 'eCommerce',
         link: '/shop',
         mega_menus: [
-          { title: 'Login', link: '/login' },
-          { title: 'Register', link: '/register' },
-          { title: 'Forgot Password', link: '/forgot' },
-          { title: '404 Error', link: '/404' },
+          // { title: 'Shopping Cart', link: '/cart' },
+          { title: 'Compare', link: '/compare' },
+          { title: 'Wishlist', link: '/wishlist' },
+          // { title: 'Checkout', link: '/checkout' },
+          { title: 'My account', link: '/profile' },
         ]
       },
+      // {
+      //   title: 'More Pages',
+      //   link: '/shop',
+      //   mega_menus: [
+      //     { title: 'Login', link: '/login' },
+      //     { title: 'Register', link: '/register' },
+      //     { title: 'Forgot Password', link: '/forgot' },
+      //     { title: '404 Error', link: '/404' },
+      //   ]
+      // },
     ]
   },
-  {
-    id: 3,
-    sub_menu: true,
-    title: 'Shop',
-    link: '/shop',
-    sub_menus: [
-      { title: 'Shop', link: '/shop' },
-      { title: 'Right Sidebar', link: '/shop-right-sidebar' },
-      { title: 'Hidden Sidebar', link: '/shop-hidden-sidebar' },
-    ],
-  },
-  {
-    id: 4,
-    single_link: true,
-    title: 'Coupons',
-    link: '/coupon',
-  },
+  // {
+  //   id: 3,
+  //   sub_menu: true,
+  //   title: 'Shop',
+  //   link: '/shop',
+  //   sub_menus: [
+  //     { title: 'Shop', link: '/shop' },
+  //     { title: 'Right Sidebar', link: '/shop-right-sidebar' },
+  //     { title: 'Hidden Sidebar', link: '/shop-hidden-sidebar' },
+  //   ],
+  // },
+  // {
+  //   id: 4,
+  //   single_link: true,
+  //   title: 'Coupons',
+  //   link: '/coupon',
+  // },
   {
     id: 5,
     sub_menu: true,
@@ -156,11 +158,11 @@ export const mobile_menu = [
     title: 'Products',
     link: '/shop',
     sub_menus: [
-      { title: 'Shop', link: '/shop' },
-      { title: 'Right Sidebar', link: '/shop-right-sidebar' },
-      { title: 'Hidden Sidebar', link: '/shop-hidden-sidebar' },
+      { title: 'All Products', link: '/shop' },
       { title: 'Only Categories', link: '/shop-category' },
-      { title: 'Product Simple', link: '/product-details' },
+      { title: 'Sports T- Short', link: '/product-details' },
+      { title: 'regular uniform', link: '/shop-category' },
+      { title: 'Accessories', link: '/shop' },
       { title: 'With Video', link: '/product-details-video' },
       { title: 'With Countdown Timer', link: '/product-details-countdown' },
       { title: 'Variations Swatches', link: '/product-details-swatches' },
@@ -172,31 +174,31 @@ export const mobile_menu = [
     title: 'eCommerce',
     link: '/cart',
     sub_menus: [
-      { title: 'Shopping Cart', link: '/cart' },
+      // { title: 'Shopping Cart', link: '/cart' },
       { title: 'Compare', link: '/compare' },
       { title: 'Wishlist', link: '/wishlist' },
-      { title: 'Checkout', link: '/checkout' },
+      // { title: 'Checkout', link: '/checkout' },
       { title: 'My account', link: '/profile' },
     ],
   },
-  {
-    id: 4,
-    sub_menu: true,
-    title: 'More Pages',
-    link: '/login',
-    sub_menus: [
-      { title: 'Login', link: '/login' },
-      { title: 'Register', link: '/register' },
-      { title: 'Forgot Password', link: '/forgot' },
-      { title: '404 Error', link: '/404' },
-    ],
-  },
-  {
-    id: 4,
-    single_link: true,
-    title: 'Coupons',
-    link: '/coupon',
-  },
+  // {
+  //   id: 4,
+  //   sub_menu: true,
+  //   title: 'More Pages',
+  //   link: '/login',
+  //   sub_menus: [
+  //     { title: 'Login', link: '/login' },
+  //     { title: 'Register', link: '/register' },
+  //     { title: 'Forgot Password', link: '/forgot' },
+  //     { title: '404 Error', link: '/404' },
+  //   ],
+  // },
+  // {
+  //   id: 4,
+  //   single_link: true,
+  //   title: 'Coupons',
+  //   link: '/coupon',
+  // },
   {
     id: 5,
     sub_menu: true,

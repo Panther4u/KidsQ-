@@ -15,7 +15,7 @@ function Language({active,handleActive}) {
       >
         English
       </span>
-      <ul className={active === 'lang' ? "tp-lang-list-open" : ""}>
+      {/* <ul className={active === 'lang' ? "tp-lang-list-open" : ""}>
         <li>
           <a href="#">Spanish</a>
         </li>
@@ -25,7 +25,7 @@ function Language({active,handleActive}) {
         <li>
           <a href="#">Portuguese</a>
         </li>
-      </ul>
+      </ul> */}
     </div>
   );
 }

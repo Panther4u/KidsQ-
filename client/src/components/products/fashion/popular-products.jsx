@@ -1,7 +1,7 @@
 // external
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Scrollbar } from "swiper";
+import { Scrollbar, Autoplay } from "swiper";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import Link from "next/link";
@@ -17,8 +17,12 @@ import { notifyError } from "@/utils/toast";
 const slider_setting = {
   slidesPerView: 5,
   spaceBetween: 20,
-  loop: false,
+  loop: true, // Enables continuous loop mode
   centeredSlides: false,
+  autoplay: {
+    delay: 3000, // Slide delay in milliseconds (3 seconds)
+    disableOnInteraction: false, // Keeps autoplay running even after user interactions
+  },
   scrollbar: {
     el: ".swiper-scrollbar",
     draggable: true,
@@ -33,16 +37,17 @@ const slider_setting = {
       slidesPerView: 4,
     },
     768: {
-      slidesPerView: 3,
+      slidesPerView: 4,
     },
     576: {
-      slidesPerView: 2,
+      slidesPerView: 3,
     },
     0: {
-      slidesPerView: 1,
+      slidesPerView: 2,
     },
   },
 };
+
 
 const PopularProducts = () => {
   const {data: products,isError,isLoading} = useGetPopularProductByTypeQuery("fashion");
@@ -76,7 +81,7 @@ const PopularProducts = () => {
     content = (
       <Swiper
         {...slider_setting}
-        modules={[Scrollbar]}
+        modules={[Scrollbar, Autoplay]}
         className="tp-category-slider-active-2 swiper-container mb-50"
       >
         {product_items.map((item) => (

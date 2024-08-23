@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 // internal
-import logo from '@assets/img/logo/logo.svg';
+import logo from '@assets/img/logo/logo.png';
 import pay from '@assets/img/footer/footer-pay.png';
 import social_data from '@/data/social-data';
 import { Email, Location } from '@/svg';
@@ -20,7 +20,7 @@ const Footer = ({ style_2 = false, style_3 = false,primary_style=false }) => {
                   <div className="tp-footer-widget-content">
                     <div className="tp-footer-logo">
                       <Link href="/">
-                        <Image src={logo} alt="logo" />
+                        <Image src={logo} alt="logo" height={60}  width={140} />
                       </Link>
                     </div>
                     <p className="tp-footer-desc">We are a dynamic team of full stack developers and designers crafting high-quality web applications</p>
@@ -38,12 +38,12 @@ const Footer = ({ style_2 = false, style_3 = false,primary_style=false }) => {
                   <h4 className="tp-footer-widget-title">My Account</h4>
                   <div className="tp-footer-widget-content">
                     <ul>
-                      <li><a href="#">Track Orders</a></li>
-                      <li><a href="#">Shipping</a></li>
+                      {/* <li><a href="#">Track Orders</a></li>
+                      <li><a href="#">Shipping</a></li> */}
                       <li><a href="#">Wishlist</a></li>
                       <li><a href="#">My Account</a></li>
-                      <li><a href="#">Order History</a></li>
-                      <li><a href="#">Returns</a></li>
+                      {/* <li><a href="#">Order History</a></li>
+                      <li><a href="#">Returns</a></li> */}
                     </ul>
                   </div>
                 </div>
@@ -69,7 +69,7 @@ const Footer = ({ style_2 = false, style_3 = false,primary_style=false }) => {
                   <div className="tp-footer-widget-content">
                     <div className="tp-footer-talk mb-20">
                       <span>Got Questions? Call us</span>
-                      <h4><a href="tel:670-413-90-762">+966 595 035 008</a></h4>
+                      <h4><a href="tel:670-413-90-762">+91 866 805 4205</a></h4>
                     </div>
                     <div className="tp-footer-contact">
                       <div className="tp-footer-contact-item d-flex align-items-start">
@@ -105,18 +105,18 @@ const Footer = ({ style_2 = false, style_3 = false,primary_style=false }) => {
               <div className="row align-items-center">
                 <div className="col-md-6">
                   <div className="tp-footer-copyright">
-                    <p>© {new Date().getFullYear()} All Rights Reserved  |  Next js Template by
+                    <p>© {new Date().getFullYear()} All Rights Reserved  by Unicoderr
                       <Link href="/">{" "}❤</Link>.
                     </p>
                   </div>
                 </div>
-                <div className="col-md-6">
+                {/* <div className="col-md-6">
                   <div className="tp-footer-payment text-md-end">
                     <p>
                       <Image src={pay} alt="pay" />
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

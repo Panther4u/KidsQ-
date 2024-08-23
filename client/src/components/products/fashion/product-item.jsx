@@ -1,8 +1,8 @@
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { Rating } from "react-simple-star-rating";
-import Link from "next/link";
 // internal
 import { Cart, CompareThree, QuickView, Wishlist } from "@/svg";
 import { handleProductModal } from "@/redux/features/productModalSlice";
@@ -15,8 +15,11 @@ const ProductItem = ({ product, style_2 = false }) => {
   const [ratingVal, setRatingVal] = useState(0);
   const { cart_products } = useSelector((state) => state.cart);
   const { wishlist } = useSelector((state) => state.wishlist);
+  const { compareItems } = useSelector((state) => state.compare); // Add compareItems selector
   const isAddedToCart = cart_products.some((prd) => prd._id === _id);
   const isAddedToWishlist = wishlist.some((prd) => prd._id === _id);
+  const isAddedToCompare = compareItems.some((prd) => prd._id === _id);
+  const isCompareLimitReached = compareItems.length >= 6; // Check if the limit is reached
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -41,9 +44,12 @@ const ProductItem = ({ product, style_2 = false }) => {
 
   // handle compare product
   const handleCompareProduct = (prd) => {
-    dispatch(add_to_compare(prd));
+    if (!isCompareLimitReached) {
+      dispatch(add_to_compare(prd));
+    } else {
+      alert('You can only compare up to 6 items.'); // Show an alert or a custom message
+    }
   };
-
 
   return (
     <div className={`tp-product-item-2 ${style_2 ? "" : "mb-40"}`}>
@@ -100,10 +106,14 @@ const ProductItem = ({ product, style_2 = false }) => {
                 Add To Wishlist
               </span>
             </button>
-            <button disabled={status === 'out-of-stock'} onClick={() => handleCompareProduct(product)} className="tp-product-action-btn-2 tp-product-add-to-compare-btn">
+            <button
+              disabled={status === 'out-of-stock' || isCompareLimitReached || isAddedToCompare} 
+              onClick={() => handleCompareProduct(product)} 
+              className={`tp-product-action-btn-2 tp-product-add-to-compare-btn ${isAddedToCompare ? 'active' : ''}`}
+            >
               <CompareThree />
               <span className="tp-product-tooltip tp-product-tooltip-right">
-                Add To Compare
+                {isCompareLimitReached ? 'Compare Limit Reached' : isAddedToCompare ? 'In Compare' : 'Add To Compare'}
               </span>
             </button>
           </div>
@@ -119,7 +129,7 @@ const ProductItem = ({ product, style_2 = false }) => {
           ))}
         </div>
         <h3 className="tp-product-title-2">
-          <Link href={`/product-details/${_id}`}>{title}</Link>
+          <Link  href={`/product-details/${_id}`}>{title}</Link>
         </h3>
         <div className="tp-product-rating-icon tp-product-rating-icon-2">
           <Rating allowFraction size={16} initialValue={ratingVal} readonly={true} />

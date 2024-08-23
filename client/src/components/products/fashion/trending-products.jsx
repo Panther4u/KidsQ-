@@ -1,7 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper';
-// internal
+import { Pagination, Autoplay } from 'swiper';
+import Image from 'next/image';
 import { ArrowRightLong, TextShapeLine } from '@/svg';
 import { useGetProductTypeQuery } from '@/redux/features/productApi';
 import ProductItem from './product-item';
@@ -10,7 +10,7 @@ import trending_banner from '@assets/img/product/trending/banner/trending-banner
 import { HomeTwoNewPrdPrdLoader } from '@/components/loader';
 import Link from 'next/link';
 
-// slider setting 
+// slider setting
 const slider_setting = {
   slidesPerView: 2,
   spaceBetween: 24,
@@ -18,18 +18,22 @@ const slider_setting = {
     el: ".tp-trending-slider-dot",
     clickable: true,
   },
+  autoplay: {
+    delay: 3000, // Slide delay in milliseconds (3 seconds)
+    disableOnInteraction: false, // Keeps autoplay running even after user interactions
+  },
   breakpoints: {
     '1200': {
-      slidesPerView: 3,
+      slidesPerView: 4,
     },
     '768': {
-      slidesPerView: 2,
+      slidesPerView: 3,
     },
-    '396': {
+    '596': {
       slidesPerView: 2,
     },
     '0': {
-      slidesPerView: 1,
+      slidesPerView: 2,
     },
   }
 }
@@ -37,6 +41,7 @@ const slider_setting = {
 const TrendingProducts = () => {
   const { data: products, isError, isLoading } =
     useGetProductTypeQuery({ type: 'fashion', query: `new=true` });
+
   // decide what to render
   let content = null;
 
@@ -54,17 +59,20 @@ const TrendingProducts = () => {
   if (!isLoading && !isError && products?.data?.length > 0) {
     const product_items = products.data.slice(0,5);
     content = (
-      <Swiper {...slider_setting} modules={[Pagination]} className="tp-trending-slider-active swiper-container">
-        {product_items.map((item) => {
-          return (
-            <SwiperSlide key={item._id} className="tp-trending-item">
-              <ProductItem product={item} style_2={true} />
-            </SwiperSlide>
-          )
-        })}
+      <Swiper
+        {...slider_setting}
+        modules={[Pagination, Autoplay]} // Include Autoplay module
+        className="tp-trending-slider-active swiper-container"
+      >
+        {product_items.map((item) => (
+          <SwiperSlide key={item._id} className="tp-trending-item">
+            <ProductItem product={item} style_2={true} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     )
   }
+
   return (
     <>
       <section className="tp-trending-area pt-140 pb-150">
