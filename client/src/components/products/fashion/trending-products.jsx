@@ -20,12 +20,12 @@ const slider_setting = {
   },
   breakpoints: {
     '1200': {
-      slidesPerView: 2,
+      slidesPerView: 3,
     },
     '768': {
       slidesPerView: 2,
     },
-    '576': {
+    '396': {
       slidesPerView: 2,
     },
     '0': {

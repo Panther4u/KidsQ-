@@ -35,7 +35,7 @@ const FashionTestimonial = () => {
                 </div>
                 <h3 className="tp-testimonial-section-title text-center">The Review Are In</h3>
                 <div className="row justify-content-center">
-                  <div className="col-xl-8 col-lg-8 col-md-10">
+                  <div className="col-xl-8 col-lg-8 col-md-10 ">
 
                     <Swiper {...slider_setting} modules={[Navigation, Pagination]} className="tp-testimonial-slider-active swiper-container">
                       {fashion_testi_data.map(item => (

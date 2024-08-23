@@ -1,0 +1,19 @@
+.containers {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 20px; // Optional: Adjust padding as needed
+    padding-right: 20px;
+    margin: 0;
+  }
+
+
+
+  @media (max-width:768px) {
+    .containers {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 10px; // Optional: Adjust padding as needed
+        padding-right: 10px;
+        margin: 0;
+      }
+  }

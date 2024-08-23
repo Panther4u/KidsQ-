@@ -13,6 +13,7 @@ import CartMiniSidebar from '@/components/common/cart-mini-sidebar';
 import { CartTwo, Compare, Facebook, Menu, PhoneTwo, Wishlist, Search } from '@/svg';
 import useSearchFormSubmit from '@/hooks/use-search-form-submit';
 import OffCanvas from '@/components/common/off-canvas';
+import styles from './header-2.module.scss';
 
 const HeaderTwo = ({ style_2 = false }) => {
   const { wishlist } = useSelector((state) => state.wishlist);
@@ -26,7 +27,7 @@ const HeaderTwo = ({ style_2 = false }) => {
       <header>
         <div className={`tp-header-area tp-header-style-${style_2 ? 'primary' : 'darkRed'} tp-header-height`}>
           <div className="tp-header-top-2 p-relative z-index-11 tp-header-top-border d-none d-md-block">
-            <div className="container">
+            <div className={styles.containers}>
               <div className="row align-items-center">
                 <div className="col-md-6">
                   <div className="tp-header-info d-flex align-items-center">
@@ -56,7 +57,7 @@ const HeaderTwo = ({ style_2 = false }) => {
           </div>
 
           <div id="header-sticky" className={`tp-header-bottom-2 tp-header-sticky ${sticky ? 'header-sticky' : ''}`}>
-            <div className="container">
+            <div className={styles.containers}>
               <div className="tp-mega-menu-wrapper p-relative">
                 <div className="row align-items-center">
                   <div className="col-xl-2 col-lg-5 col-md-5 col-sm-4 col-6">
