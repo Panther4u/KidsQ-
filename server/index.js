@@ -31,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // connect database
 connectDB();
 
+
 app.use("/api/user", userRoutes);
 app.use("/api/category", categoryRoutes);
 app.use("/api/brand", brandRoutes);
