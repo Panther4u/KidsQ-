@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Link from 'next/link';
 // internal
 import Menus from './header-com/menus';
-import logo from '@assets/img/logo/logo.svg';
+import logo from '@assets/img/logo/logo.png';
 import useSticky from '@/hooks/use-sticky';
 import useCartInfo from '@/hooks/use-cart-info';
 import { openCartMini } from '@/redux/features/cartSlice';
@@ -56,14 +56,14 @@ const HeaderTwo = ({ style_2 = false }) => {
             </div>
           </div>
 
-          <div id="header-sticky" className={`tp-header-bottom-2 tp-header-sticky ${sticky ? 'header-sticky' : ''}`}>
+          <div id="header-sticky" className={`p-0 m-2 tp-header-bottom-2 tp-header-sticky ${sticky ? 'header-sticky' : ''}`}>
             <div className={styles.containers}>
               <div className="tp-mega-menu-wrapper p-relative">
                 <div className="row align-items-center">
                   <div className="col-xl-2 col-lg-5 col-md-5 col-sm-4 col-6">
                     <div className="logo">
                       <Link href="/">
-                        <Image src={logo} alt="logo" priority />
+                        <Image src={logo} alt="logo" priority height={50}  width={120}/>
                       </Link>
                     </div>
                   </div>
