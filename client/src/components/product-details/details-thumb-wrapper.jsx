@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import PopupVideo from "../common/popup-video";
 
 const DetailsThumbWrapper = ({
@@ -9,14 +9,15 @@ const DetailsThumbWrapper = ({
   imgWidth = 416,
   imgHeight = 480,
   videoId = false,
-  status
+  status,
 }) => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
     <>
-      <div className="tp-product-details-thumb-wrapper tp-tab d-sm-flex">
-        <nav>
-          <div className="nav nav-tabs flex-sm-column">
+      <div className="tp-product-details-thumb-wrapper">
+        <nav className="nav-wrapper">
+          <div className="nav nav-tabs">
             {imageURLs?.map((item, i) => (
               <button
                 key={i}
@@ -25,7 +26,7 @@ const DetailsThumbWrapper = ({
               >
                 <Image
                   src={item.img}
-                  alt="image"
+                  alt={`Thumbnail ${i + 1}`}
                   width={78}
                   height={100}
                   style={{ width: "100%", height: "100%" }}
@@ -39,12 +40,14 @@ const DetailsThumbWrapper = ({
             <div className="tp-product-details-nav-main-thumb p-relative">
               <Image
                 src={activeImg}
-                alt="product img"
+                alt="Product Image"
                 width={imgWidth}
                 height={imgHeight}
               />
               <div className="tp-product-badge">
-                {status === 'out-of-stock' && <span className="product-hot">out-stock</span>}
+                {status === "out-of-stock" && (
+                  <span className="product-hot">Out of Stock</span>
+                )}
               </div>
               {videoId && (
                 <div
@@ -60,7 +63,7 @@ const DetailsThumbWrapper = ({
           </div>
         </div>
       </div>
-      {/* modal popup start */}
+
       {videoId && (
         <PopupVideo
           isVideoOpen={isVideoOpen}
@@ -68,7 +71,56 @@ const DetailsThumbWrapper = ({
           videoId={videoId}
         />
       )}
-      {/* modal popup end */}
+
+      <style jsx>{`
+        .tp-product-details-thumb-wrapper {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 16px;
+          margin: 0px;
+        }
+
+        .nav-wrapper {
+          flex-shrink: 0;
+        }
+
+        .nav-tabs {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 2px;
+        }
+
+        .tp-product-details-nav-main-thumb {
+          max-width: 100%;
+        }
+
+        @media (max-width: 576px) {
+          .tp-product-details-thumb-wrapper {
+            flex-direction: column;
+            align-items: center;
+            margin: 0px;
+          }
+
+          .nav-wrapper {
+            order: 2;
+            margin-top: 16px;
+          }
+
+          .nav-tabs {
+            flex-direction: row;
+            justify-content: end;
+          }
+
+          .tp-product-details-nav-main-thumb {
+            width: 100%;
+          }
+        }
+      `}</style>
     </>
   );
 };

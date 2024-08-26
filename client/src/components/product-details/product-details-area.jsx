@@ -20,7 +20,7 @@ const ProductDetailsArea = ({ productItem }) => {
   };
   return (
     <section className="tp-product-details-area">
-      <div className="tp-product-details-top pb-115">
+      <div className="tp-product-details-top pb-25">
         <div className="container">
           <div className="row">
             <div className="col-xl-7 col-lg-6">
@@ -51,7 +51,7 @@ const ProductDetailsArea = ({ productItem }) => {
       </div>
 
       {/* product details description */}
-      <div className="tp-product-details-bottom pb-140">
+      <div className="tp-product-details-bottom pb-30">
         <div className="container">
           <div className="row">
             <div className="col-xl-12">

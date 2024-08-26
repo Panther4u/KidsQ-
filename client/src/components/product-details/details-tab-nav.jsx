@@ -55,7 +55,7 @@ const DetailsTabNav = ({ product }) => {
         <div className="tab-content" id="navPresentationTabContent">
           {/* nav-desc */}
           <div className="tab-pane fade show active" id="nav-desc" role="tabpanel" aria-labelledby="nav-desc-tab" tabIndex="-1">
-            <div className="tp-product-details-desc-wrapper pt-60">
+            <div className="tp-product-details-desc-wrapper pt-40">
               <div className="row">
                 <div className="col-xl-12">
                   <div className="tp-product-details-desc-item">
