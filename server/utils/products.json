@@ -1250,7 +1250,7 @@
         "img": "https://i.ibb.co/yf4LB8p/clothing-8.png"
       }
     ],
-    "parent": "Clothing",
+    "parent": "Sports Uniforms",
     "children": "Men's",
     "price": 65,
     "discount": 0,
@@ -1260,7 +1260,7 @@
       "id": "641feafc19436d47078261a3"
     },
     "category": {
-      "name": "Clothing",
+      "name": "Sports Uniforms",
       "id": "64200cb921162f8b15beae3e"
     },
     "status": "out-of-stock",
@@ -1338,7 +1338,7 @@
         "img": "https://i.ibb.co/P9qdSXC/clothing-12.png"
       }
     ],
-    "parent": "Clothing",
+    "parent": "Sports Uniforms",
     "children": "Women's",
     "price": 70,
     "discount": 5,
@@ -1348,7 +1348,7 @@
       "id": "641feafc19436d47078261a3"
     },
     "category": {
-      "name": "Clothing",
+      "name": "Sports Uniforms",
       "id": "64200cb921162f8b15beae3e"
     },
     "status": "in-stock",
@@ -1427,7 +1427,7 @@
         "img": "https://i.ibb.co/GxKRg51/bag-4.png"
       }
     ],
-    "parent": "Bags",
+    "parent": "Sports Uniforms",
     "children": "HandBag",
     "price": 110,
     "discount": 0,
@@ -1437,7 +1437,7 @@
       "id": "641522d9cd2724817c1c7c38"
     },
     "category": {
-      "name": "Bags",
+      "name": "Sports Uniforms",
       "id": "64200cef21162f8b15beae40"
     },
     "status": "in-stock",
@@ -1515,7 +1515,7 @@
         "img": "https://i.ibb.co/BcDb57T/bag-8.png"
       }
     ],
-    "parent": "Bags",
+    "parent": "Sports Uniforms",
     "children": "Traveling Bag",
     "price": 120,
     "discount": 5,
@@ -1525,7 +1525,7 @@
       "id": "641522d9cd2724817c1c7c38"
     },
     "category": {
-      "name": "Bags",
+      "name": "Sports Uniforms",
       "id": "64200cef21162f8b15beae40"
     },
     "status": "in-stock",
@@ -1604,7 +1604,7 @@
         "img": "https://i.ibb.co/ZxHVh8L/shoes-4.png"
       }
     ],
-    "parent": "Shoes",
+    "parent": "Accessories",
     "children": "Men's",
     "price": 250,
     "discount": 5,
@@ -1614,7 +1614,7 @@
       "id": "64200b8221162f8b15beae3c"
     },
     "category": {
-      "name": "Shoes",
+      "name": "Accessories",
       "id": "64200d2421162f8b15beae42"
     },
     "status": "in-stock",
@@ -1692,7 +1692,7 @@
         "img": "https://i.ibb.co/PThjLJh/shoes-8.png"
       }
     ],
-    "parent": "Shoes",
+    "parent": "Accessories",
     "children": "Women's",
     "price": 270,
     "discount": 7,
@@ -1702,7 +1702,7 @@
       "id": "64200b8221162f8b15beae3c"
     },
     "category": {
-      "name": "Shoes",
+      "name": "Accessories",
       "id": "64200d2421162f8b15beae42"
     },
     "status": "in-stock",
