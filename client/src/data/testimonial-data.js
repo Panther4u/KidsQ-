@@ -10,24 +10,24 @@ export const fashion_testi_data = [
     review:4,
     desc:'“ How you use the city or town name is up to you. All results may be freely used in any work.”',
     user:user_2,
-    name:'Theodore Handle',
-    designation:'CO Founder'
+    school:'Kongu Schhol',
+    name:'CO Founder'
   },
   {
     id:2,
     review:5,
     desc:'“Very happy with our choice to take our daughter to Brave care. The entire team was great! Thank you!”',
     user:user_3,
-    name:'John Smith',
-    designation:'UI/UX Designer'
+    school:'Kongu Schhol',
+    name:'CO Founder'
   },
   {
     id:3,
     review:3,
     desc:'“Thanks for all your efforts and teamwork over the last several months!  Thank you so much”',
     user:user_4,
-    name:'Salim Rana',
-    designation:'Web Developer'
+    school:'Kongu Schhol',
+    name:'CO Founder'
   },
 ]
 

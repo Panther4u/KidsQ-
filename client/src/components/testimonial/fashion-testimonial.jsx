@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper';
+import { Navigation, Pagination, Autoplay } from 'swiper';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { Rating } from 'react-simple-star-rating';
@@ -12,6 +12,10 @@ import { fashion_testi_data } from '@/data/testimonial-data';
 const slider_setting = {
   slidesPerView: 1,
   spaceBetween: 0,
+  autoplay: {
+    delay: 3000, // Auto slide every 5 seconds
+    disableOnInteraction: false, // Continue auto-sliding after user interaction
+  },
   pagination: {
     el: ".tp-testimonial-slider-dot",
     clickable: true,
@@ -37,7 +41,11 @@ const FashionTestimonial = () => {
                 <div className="row justify-content-center">
                   <div className="col-xl-8 col-lg-8 col-md-10 ">
 
-                    <Swiper {...slider_setting} modules={[Navigation, Pagination]} className="tp-testimonial-slider-active swiper-container">
+                    <Swiper 
+                      {...slider_setting} 
+                      modules={[Navigation, Pagination, Autoplay]} 
+                      className="tp-testimonial-slider-active swiper-container"
+                    >
                       {fashion_testi_data.map(item => (
                         <SwiperSlide key={item.id} className="tp-testimonial-item text-center mb-20">
                           <div className="tp-testimonial-rating">
@@ -52,8 +60,8 @@ const FashionTestimonial = () => {
                                 <Image src={item.user} alt="user img" />
                               </div>
                               <div className="tp-testimonial-user-info tp-testimonial-user-translate">
-                                <h3 className="tp-testimonial-user-title">{item.name}</h3>
-                                <span className="tp-testimonial-designation">{item.designation}</span>
+                                <h3 className="tp-testimonial-user-title">{item.school}</h3>
+                                <span className="tp-testimonial-designation">{item.name}</span>
                               </div>
                             </div>
                           </div>

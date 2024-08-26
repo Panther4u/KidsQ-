@@ -28,7 +28,7 @@ export default function Home() {
       <BestSellerProducts/>
       <FashionTestimonial/>
       <BlogArea/>
-      <FeatureAreaTwo/>
+      {/* <FeatureAreaTwo/> */}
       <InstagramAreaTwo/>
       <Footer style_2={true} />
     </Wrapper>

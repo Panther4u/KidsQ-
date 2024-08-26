@@ -35,7 +35,7 @@ const HeaderTwo = ({ style_2 = false }) => {
                       <a href="#">
                         <span>
                           <Facebook />
-                        </span> 7500k Followers
+                        </span> 10+ Schools
                       </a>
                     </div>
                     <div className="tp-header-info-item">

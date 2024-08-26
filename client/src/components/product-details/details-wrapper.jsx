@@ -117,9 +117,9 @@ const DetailsWrapper = ({ productItem, handleImageActive, activeImg, detailsBott
           {/* product quantity */}
           <ProductQuantity />
           {/* product quantity */}
-          <div className="tp-product-details-add-to-cart mb-15 w-100">
+          {/* <div className="tp-product-details-add-to-cart mb-15 w-100">
             <button onClick={() => handleAddProduct(productItem)} disabled={status === 'out-of-stock'} className="tp-product-details-add-to-cart-btn w-100">Add To Cart</button>
-          </div>
+          </div> */}
         </div>
         <Link href="/cart" onClick={() => dispatch(handleModalClose())}>
           <button className="tp-product-details-buy-now-btn w-100">Buy Now</button>
@@ -135,10 +135,10 @@ const DetailsWrapper = ({ productItem, handleImageActive, activeImg, detailsBott
           <WishlistTwo />
           Add Wishlist
         </button>
-        <button type="button" className="tp-product-details-action-sm-btn">
+        {/* <button type="button" className="tp-product-details-action-sm-btn">
           <AskQuestion />
           Ask a question
-        </button>
+        </button> */}
       </div>
       {/* product-details-action-sm end */}
 

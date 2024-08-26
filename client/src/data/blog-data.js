@@ -3,9 +3,9 @@ import blog_1 from "@assets/img/blog/blog-1.jpg";
 import blog_2 from "@assets/img/blog/blog-2.jpg";
 import blog_3 from "@assets/img/blog/blog-3.jpg";
 // fashion
-import blog_4 from '@assets/img/blog/2/blog-1.jpg';
-import blog_5 from '@assets/img/blog/2/blog-2.jpg';
-import blog_6 from '@assets/img/blog/2/blog-3.jpg';
+import blog_4 from '@assets/img/blog/2/blog-4.jpg';
+import blog_5 from '@assets/img/blog/2/blog-5.webp';
+import blog_6 from '@assets/img/blog/2/blog-6.webp';
 // blog postbox 
 import blog_post_1 from '@assets/img/blog/blog-big-3.jpg';
 import blog_post_2 from '@assets/img/blog/blog-big-2.jpg';
@@ -76,9 +76,9 @@ const blogData = [
     id: 4,
     img: blog_4,
     date: "20 July, 2023",
-    author:'John Smith',
-    title: "The 'Boomerang' Employees Returning After Quitting",
-    tags: ["Fashion", "Lift Style","News"],
+    author:'KidsQ',
+    title: "'Kongu school' sports unifroms",
+    tags: ["School", "Sports Uniform","Kongu School"],
     category:'fashion',
     comments:6,
     sm_desc:
@@ -89,9 +89,9 @@ const blogData = [
     id: 5,
     img: blog_5,
     date: "18 March, 2023",
-    author:'John Smith',
-    title: "Fast fashion: How clothes are linked to climate change",
-    tags: ["Fashion", "Lift Style","News"],
+    author:'KidsQ',
+    title: "'Kongu school' regular unifroms",
+    tags: ["School", "Regular Uniform","Kongu School"],
     category:'fashion',
     comments:3,
     sm_desc:
@@ -102,9 +102,9 @@ const blogData = [
     id: 6,
     img: blog_6,
     date: "15 February, 2023",
-    author:'John Smith',
-    title: "The Sound Of Fashion: Malcolm McLaren Words",
-    tags: ["Fashion", "Lift Style","News"],
+    author:'KidsQ',
+    title: "'Kongu school' sports unifroms",
+    tags: ["School", "Sports Uniform","Kongu School"],
     category:'fashion',
     comments:8,
     sm_desc:

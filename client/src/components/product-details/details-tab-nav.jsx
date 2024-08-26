@@ -47,7 +47,7 @@ const DetailsTabNav = ({ product }) => {
           <div className="nav nav-tabs justify-content-center p-relative tp-product-tab" id="navPresentationTab" role="tablist">
             <NavItem active={true} linkRef={activeRef} id="desc" title="Description" />
             <NavItem id="additional" title="Additional information" />
-            <NavItem id="review" title={`Reviews (${reviews.length})`} />
+            {/* <NavItem id="review" title={`Reviews (${reviews.length})`} /> */}
 
             <span ref={marker} id="productTabMarker" className="tp-product-details-tab-line"></span>
           </div>
@@ -92,13 +92,13 @@ const DetailsTabNav = ({ product }) => {
             </div>
           </div>
           {/* review */}
-          <div className="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab" tabIndex="-1">
+          {/* <div className="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab" tabIndex="-1">
             <div className="tp-product-details-review-wrapper pt-60">
               <div className="row">
                 <div className="col-lg-6">
                   <div className="tp-product-details-review-statics">
 
-                    {/* reviews */}
+                    
                     <div className="tp-product-details-review-list pr-110">
                       <h3 className="tp-product-details-review-title">Rating & Review</h3>
                       {reviews.length === 0 && <h3 className="tp-product-details-review-title">
@@ -115,14 +115,14 @@ const DetailsTabNav = ({ product }) => {
                   <div className="tp-product-details-review-form">
                     <h3 className="tp-product-details-review-form-title">Review this product</h3>
                     <p>Your email address will not be published. Required fields are marked *</p>
-                    {/* form start */}
+                    
                     <ReviewForm product_id={_id} />
-                    {/* form end */}
+                  
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

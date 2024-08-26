@@ -42,10 +42,10 @@ const menu_data = [
         title: 'Shop Page',
         link: '/shop',
         mega_menus: [
-          { title: 'Product Simple', link: '/product-details' },
+          // { title: 'Product Simple', link: '/product-details' },
           { title: 'With Video', link: '/product-details-video' },
           { title: 'With Countdown Timer', link: '/product-details-countdown' },
-          { title: 'Variations Swatches', link: '/product-details-swatches' },
+          // { title: 'Variations Swatches', link: '/product-details-swatches' },
         ]
       },
       {
@@ -60,7 +60,7 @@ const menu_data = [
         ]
       },
       {
-        title: 'eCommerce',
+        title: 'Profile',
         link: '/shop',
         mega_menus: [
           // { title: 'Shopping Cart', link: '/cart' },
@@ -101,16 +101,16 @@ const menu_data = [
   // },
   {
     id: 5,
-    sub_menu: true,
+    single_link: true,
     title: 'Blog',
-    link: '/blog',
-    sub_menus: [
-      { title: 'Blog Standard', link: '/blog' },
-      { title: 'Blog Grid', link: '/blog-grid' },
-      { title: 'Blog List', link: '/blog-list' },
-      { title: 'Blog Details', link: '/blog-details' },
-      { title: 'Blog Details Full Width', link: '/blog-details-2' },
-    ]
+    link: '/blog-list',
+    // sub_menus: [
+    //   // { title: 'Blog Standard', link: '/blog' },
+    //   // { title: 'Blog Grid', link: '/blog-grid' },
+    //   // { title: 'Blog List', link: '/blog-list' },
+    //   // { title: 'Blog Details', link: '/blog-details' },
+    //   // { title: 'Blog Details Full Width', link: '/blog-details-2' },
+    // ]
   },
   {
     id: 6,
@@ -171,7 +171,7 @@ export const mobile_menu = [
   {
     id: 3,
     sub_menu: true,
-    title: 'eCommerce',
+    title: 'Profile',
     link: '/cart',
     sub_menus: [
       // { title: 'Shopping Cart', link: '/cart' },
@@ -205,11 +205,11 @@ export const mobile_menu = [
     title: 'Blog',
     link: '/blog',
     sub_menus: [
-      { title: 'Blog Standard', link: '/blog' },
-      { title: 'Blog Grid', link: '/blog-grid' },
+      // { title: 'Blog Standard', link: '/blog' },
+      // { title: 'Blog Grid', link: '/blog-grid' },
       { title: 'Blog List', link: '/blog-list' },
-      { title: 'Blog Details', link: '/blog-details' },
-      { title: 'Blog Details Full Width', link: '/blog-details-2' },
+      // { title: 'Blog Details', link: '/blog-details' },
+      // { title: 'Blog Details Full Width', link: '/blog-details-2' },
     ]
   },
   {

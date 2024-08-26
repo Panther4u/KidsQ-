@@ -19,12 +19,12 @@ const slider_setting = {
     clickable: true,
   },
   autoplay: {
-    delay: 3000, // Slide delay in milliseconds (3 seconds)
+    delay: 2000, // Slide delay in milliseconds (3 seconds)
     disableOnInteraction: false, // Keeps autoplay running even after user interactions
   },
   breakpoints: {
     '1200': {
-      slidesPerView: 4,
+      slidesPerView: 3,
     },
     '768': {
       slidesPerView: 3,

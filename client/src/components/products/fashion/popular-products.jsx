@@ -99,7 +99,7 @@ const PopularProducts = () => {
               <h3 className="tp-category-title-2">
                 <Link href={`/product-details/${item._id}`}>{item.title.substring(0, 15)}</Link>
               </h3>
-              <div className="tp-category-btn-2">
+              {/* <div className="tp-category-btn-2">
                 {cart_products.some((prd) => prd._id === item._id) ? (
                   <Link
                     href="/cart"
@@ -115,7 +115,7 @@ const PopularProducts = () => {
                     Add to Cart
                   </a>
                 )}
-              </div>
+              </div> */}
             </div>
           </SwiperSlide>
         ))}
@@ -134,7 +134,7 @@ const PopularProducts = () => {
                   <TextShapeLine />
                 </span>
                 <h3 className="tp-section-title-2">
-                  Popular on the Shofy store.
+                  Popular on the KidsQ store.
                 </h3>
               </div>
             </div>

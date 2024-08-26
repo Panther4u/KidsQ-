@@ -87,7 +87,7 @@ const ProductArea = () => {
                   All Product Shop
                   <TextShapeLine />
                 </span>
-                <h3 className="tp-section-title-2">Customer Favorite Style Product</h3>
+                <h3 className="tp-section-title-2">School Uniform Collections</h3>
               </div>
             </div>
           </div>
