@@ -27,7 +27,8 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 
-const allowedOrigins = process.env.CORS_ORIGINS ? process.env.CORS_ORIGINS.split(',') : ['https://kidsquniforms.netlify.app'];
+// Allow requests from localhost:5173 (your frontend)
+const allowedOrigins = process.env.CORS_ORIGINS ? process.env.CORS_ORIGINS.split(',') : [];
 
 app.use(cors({
   origin: function (origin, callback) {
