@@ -125,7 +125,7 @@ const PopularProducts = () => {
   }
   return (
     <>
-      <section className="tp-category-area pb-20 pt-20">
+      <section className="tp-category-area pb-60 pt-60">
         <div className="container">
           <div className="row">
             <div className="col-xl-12">
