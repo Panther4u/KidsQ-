@@ -318,51 +318,112 @@
     }
 }
 
-// home 2 banner start
-.#{$theme-prifix}-banner{
-    $self3 : &;
-    &-item-2{
-        min-height: 280px;
-        padding: 65px 48px 55px;
-        @media #{$xl, $lg}{
-            padding: 65px 25px 55px;
+.#{$theme-prifix}-banner {
+    $self3: &;
+  
+    &-item-2 {
+      min-height: 180px;
+      padding: 65px 48px 55px;
+  
+      @media #{$xl}, #{$lg} {
+        padding: 65px 25px 55px;
+      }
+  
+      @media #{$md} {
+        min-height: 160px;
+        padding: 55px 35px 45px;
+      }
+  
+      @media #{$sm} {
+        min-height: 140px;
+        padding: 45px 25px 35px;
+      }
+  
+      @media #{$xs} {
+        min-height: 120px;
+        padding: 35px 20px 30px;
+      }
+  
+      &:hover {
+        #{$self3} {
+          &-thumb-2 {
+            @include transform(scale(1.1));
+          }
         }
-        @media #{$xs}{
-            min-height: 250px;
-            padding: 49px 29px 45px;
-        }
-
-        &:hover{
-            #{$self3}{
-                &-thumb-2{
-                    @include transform(scale(1.1));
-                }
-            }
-        }
+      }
     }
-    &-thumb-2{
-        @extend %bg-thumb;
-        z-index: -1;
-
-        @media #{$xs}{
-            background-position: center left;
+  
+    &-thumb-2 {
+      @extend %bg-thumb;
+      z-index: -1;
+      background-size: cover;
+      background-position: center;
+  
+      @media #{$lg}, #{$xl} {
+        background-position: center top;
+      }
+  
+      @media #{$md} {
+        background-position: center center;
+      }
+  
+      @media #{$sm} {
+        background-position: center bottom;
+      }
+  
+      @media #{$xs} {
+        background-position: center left;
+      }
+    }
+  
+    &-title-2 {
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 1.17;
+      margin-bottom: 20px;
+  
+      @media #{$md} {
+        font-size: 32px;
+      }
+  
+      @media #{$sm} {
+        font-size: 28px;
+      }
+  
+      @media #{$xs} {
+        font-size: 14px;
+      }
+  
+      & a {
+        &:hover {
+          color: var(--tp-theme-secondary);
         }
+      }
     }
-    &-title-2{
-        font-weight: 400;
-        font-size: 36px;
-        line-height: 1.17;
-        margin-bottom: 20px;
-        & a{
-            &:hover{
-                color: var(--tp-theme-secondary);
-            }
+  
+    &-btn-2 {
+      .tp-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+  
+        @media #{$md} {
+          font-size: 15px;
+          padding: 9px 18px;
         }
+  
+        @media #{$sm} {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+  
+        @media #{$xs} {
+          font-size: 12px;
+          padding: 5px 8px;
+        }
+      }
     }
-    &-btn-2{
-
-    }
-}
+  }
+  
 
 
 //home 4 banner

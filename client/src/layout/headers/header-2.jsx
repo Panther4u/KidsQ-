@@ -63,7 +63,7 @@ const HeaderTwo = ({ style_2 = false }) => {
                   <div className="col-xl-2 col-lg-5 col-md-5 col-sm-4 col-6">
                     <div className="logo">
                       <Link href="/">
-                        <Image src={logo} alt="logo" priority height={55}  width={140}/>
+                        <Image src={logo} alt="logo" priority height={50}  width={130}/>
                       </Link>
                     </div>
                   </div>

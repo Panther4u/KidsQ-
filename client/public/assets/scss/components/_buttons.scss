@@ -60,7 +60,8 @@
 		background-color: transparent;
 		border: 1.5px solid var(--tp-common-black);
 		color: var(--tp-common-black);
-		padding: 8px 29px;
+		padding: 8px 12px;
+		font-size: 12px;
 		& svg{
 			@include transform(translateY(-2px) !important);
 		}
@@ -71,7 +72,7 @@
 		}
 
 		&-sm{
-			padding: 5px 25px;
+			padding: 5px 10px;
 		}
 		&-white{
 			border-color: rgba($color: $white, $alpha: .3);
