@@ -12,6 +12,7 @@ import { useGetPopularProductByTypeQuery } from "@/redux/features/productApi";
 import { add_cart_product } from "@/redux/features/cartSlice";
 import { HomeTwoPopularPrdLoader } from "@/components/loader";
 import { notifyError } from "@/utils/toast";
+import logo from '@assets/img/logo/logo1.png';
 
 // slider setting
 const slider_setting = {
@@ -134,7 +135,7 @@ const PopularProducts = () => {
                   <TextShapeLine />
                 </span>
                 <h3 className="tp-section-title-2">
-                  Popular on the KidsQ store.
+                  Popular on the <Image src={logo} alt="logo" priority height={50}  width={150}/> store.
                 </h3>
               </div>
             </div>
