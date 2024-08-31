@@ -5,21 +5,33 @@
 /*----------------------------------------*/
 
 .#{$theme-prifix}-contact{
+    &-top{
+    margin: 0 200px ;
+
+        @media #{$xxl, $xl, $lg, $md, $sm, $xs}{
+            margin: 0 50px ;
+        }
+        @media #{$sm, $xs}{
+        margin: 0 10px ;
+        }
+    }
     &-wrapper{
-        margin-right: 73px;
+        // margin-right: 73px;
 
         @media #{$md, $sm, $xs}{
             margin-right: 0;
         }
     }
     &-inner{
-        padding: 42px 70px 49px;
+        padding: 42px 50px 49px;
         background: var(--tp-common-white);
         box-shadow: 0px 30px 70px rgba(1, 15, 28, 0.1);
-
+        // height: 700px;
+        // width: 1300px;
         @media #{$xs}{
-            padding: 20px 25px 49px;
+            padding: 10px;
         }
+
     }
     &-title{
         font-size: 30px;
@@ -164,6 +176,18 @@
         &-wrapper{
             margin-left: 5px;
             padding-top: 50px;
+            text-align: center;
+
+            @media #{$xs}{
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: nowrap;
+                padding-top: 20px;
+            }
+            @media (max-width:375px){
+                display: flex;
+                flex-direction: column;
+            }
         }
         &-item{
             &:not(:last-child){
@@ -172,12 +196,20 @@
         }
         &-icon{
             @include flexbox();
-            align-items: flex-end;
-            justify-content: flex-start;
+            align-items: center;
+            justify-content: center;
             margin-bottom: 18px;
-            height: 62px;
+            height: 35px;
             & span{
                 font-size: 60px;
+                text-align: center;
+
+                @media (max-width:1400px){
+                    font-size: 40px;
+                }
+                // @media #{$xs}{
+                //     text-align: center;
+                // }
             }
         }
         &-content{
@@ -187,44 +219,85 @@
                     margin-bottom: 0;
                 }
                 &[data-info="phone"]{
-                    font-weight: 500;
+                    font-weight: 400;
                 }
                 font-size: 18px;
                 line-height: 1.44;
                 color: var(--tp-common-black);
+
+                @media (max-width:1400px){
+                    font-size: 15px;
+                }
+
+                @media #{$md, $sm, $xs}{
+                    font-size: 12px;
+                }
+                @media #{$xs}{
+                    font-size: 8px;
+                }
+
                 & a{
                     &:hover{
                         color: var(--tp-theme-primary);
                     }
                 }
-            }
+            } 
         }
     }
     &-social{
         &-title{
             font-weight: 400;
             font-size: 18px; 
-            margin-bottom: 15px;       
+            // margin-bottom: 15px;
+            
+            @media #{$md, $sm} {
+                font-size: 12px;
+            }
+            @media #{$xs} {
+                font-size: 8px;
+                margin-bottom: 3px;
+            }
         }
         &-icon{
-            & a{
+            & a {
                 display: inline-block;
-                width: 38px;
-                height: 38px;
-                line-height: 36px;
                 text-align: center;
-                border: 1px solid #E6E7E8;
-                background-color: var(--tp-common-white);
+                border-radius: 40%;
+                margin-right: 8px;
                 color: var(--tp-common-black);
+                transition: background-color 0.3s, color 0.3s;
 
-                &:hover{
-                    background-color: var(--tp-theme-primary);
-                    border-color: var(--tp-theme-primary);
-                    color: var(--tp-common-white);
+                &:nth-child(1) {
+                    color: green;
                 }
+    
+                &:nth-child(2) {
+                    color: rgb(206, 71, 93);
+                }
+    
+                &:nth-child(3) {
+                    color: rgb(55, 105, 212);
+                }
+    
+                &:nth-child(4) {
+                    color: rgb(20, 22, 145);
+                }
+            }
+            & i {
+                font-size: 20px;
+                
+                @media (max-width: 1400px) {
+                    font-size: 18px;
+                }
+                @media #{$xs} {
+                    font-size: 15px;
+                    margin-right: 3px;
+                }
+            
             }
         }
     }
+    
 }
 
 /* map css start */
@@ -232,7 +305,8 @@
 .#{$theme-prifix}-map{
     &-wrapper{
         position: relative;
-    }
+        margin-top: 60px;
+        }
     &-hotspot{
         position: absolute;
         top: 50%;

@@ -9,11 +9,11 @@ import contact_icon_3 from "@assets/img/contact/contact-icon-3.png";
 const ContactArea = () => {
   return (
     <>
-      <section className="tp-contact-area pb-100">
-        <div className="container">
+      <section className="tp-contact-top">
+        <div >
           <div className="tp-contact-inner">
             <div className="row">
-              <div className="col-xl-9 col-lg-8">
+              <div className="col-xl-9 col-lg-8 col-md-8 col-sm-8">
                 <div className="tp-contact-wrapper">
                   <h3 className="tp-contact-title">Sent A Message</h3>
 
@@ -25,27 +25,28 @@ const ContactArea = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-xl-3 col-lg-4">
+              <div className="col-xl-3 col-lg-4 col-md-4 col-sm-4">
                 <div className="tp-contact-info-wrapper">
                   <div className="tp-contact-info-item">
                     <div className="tp-contact-info-icon">
                       <span>
-                        <Image src={contact_icon_1} alt="contact-icon" />
+                        <Image src={contact_icon_1} alt="contact-icon 
+                          " width={40} height={40} />
                       </span>
                     </div>
                     <div className="tp-contact-info-content">
                       <p data-info="mail">
-                        <a href="mailto:contact@shofy.com">contact@shofy.com</a>
+                        <a href="mailto:info@gmail.com">info@gmail.com</a>
                       </p>
                       <p data-info="phone">
-                        <a href="tel:670-413-90-762">+670 413 90 762</a>
+                        <a href="tel:670-413-90-762">+(91)866 805 4205</a>
                       </p>
                     </div>
                   </div>
                   <div className="tp-contact-info-item">
                     <div className="tp-contact-info-icon">
                       <span>
-                        <Image src={contact_icon_2} alt="contact-icon" />
+                        <Image src={contact_icon_2} alt="contact-icon" width={40} height={40} />
                       </span>
                     </div>
                     <div className="tp-contact-info-content">
@@ -54,7 +55,7 @@ const ContactArea = () => {
                           href="https://www.google.com/maps/place/New+York,+NY,+USA/@40.6976637,-74.1197638,11z/data=!3m1!4b1!4m6!3m5!1s0x89c24fa5d33f083b:0xc80b8f06e177fe62!8m2!3d40.7127753!4d-74.0059728!16zL20vMDJfMjg2"
                           target="_blank"
                         >
-                          84 sleepy hollow st. <br /> jamaica, New York 1432
+                          84 main Street, <br /> Tirupur, Tamilnadu-600 000.
                         </a>
                       </p>
                     </div>
@@ -62,24 +63,27 @@ const ContactArea = () => {
                   <div className="tp-contact-info-item">
                     <div className="tp-contact-info-icon">
                       <span>
-                        <Image src={contact_icon_3} alt="contact-icon" />
+                        <Image src={contact_icon_3} alt="contact-icon" width={40} height={40} />
                       </span>
                     </div>
                     <div className="tp-contact-info-content">
-                      <div className="tp-contact-social-wrapper mt-5">
+                      <div className="tp-contact-social-wrapper">
                         <h4 className="tp-contact-social-title">
                           Find on social media
                         </h4>
 
                         <div className="tp-contact-social-icon">
-                          <a href="#">
-                            <i className="fa-brands fa-facebook-f"></i>
+                          <a href="https://web.whatsapp.com/">
+                            <i className="fa-brands fa-whatsapp"></i>
                           </a>
-                          <a href="#">
-                            <i className="fa-brands fa-twitter"></i>
+                          <a href="https://www.instagram.com/">
+                            <i className="fa-brands fa-instagram"></i>
                           </a>
-                          <a href="#">
-                            <i className="fa-brands fa-linkedin-in"></i>
+                          <a href="https://www.facebook.com/">
+                            <i className="fa-brands fa-facebook"></i>
+                          </a>
+                          <a href="tel:866-805-2405">
+                            <i className="fa-solid fa-phone"></i>
                           </a>
                         </div>
                       </div>
@@ -91,6 +95,34 @@ const ContactArea = () => {
           </div>
         </div>
       </section>
+      {/* <style jsx>{`
+        .tp-contact-info-content p[data-info="mail"] {
+          color: #55585b;
+          margin-bottom: 0;
+        }
+
+        .tp-contact-info-content p[data-info="phone"] {
+          font-weight: 500;
+        }
+
+        .tp-contact-info-content p {
+          font-size: 18px;
+          line-height: 1.44;
+          color: var(--tp-common-black);
+        }
+
+        .tp-contact-info-content p a:hover {
+          color: var(--tp-theme-primary);
+        }
+
+        @media (max-width: 750px) {
+          .tp-contact-info-content p,
+          .tp-contact-social-wrapper h4, 
+          .tp-contact-social-icon i{
+            font-size: 10px; // Corrected font size for the media query
+          }
+        }
+      `}</style> */}
     </>
   );
 };
