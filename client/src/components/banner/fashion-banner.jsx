@@ -56,11 +56,11 @@ const FashionBanner = () => {
       <Swiper {...slider_setting} modules={[Pagination, Navigation, EffectFade, Autoplay]} className={styles.tpSliderActive2}>
         {slider_data.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className={`${styles.tpSliderItem2} ${styles.tpSliderHeight2} grey-bg-5`}>
+            <div className={`${styles.tpSliderItem2} ${styles.tpSliderHeight2} `}>
               {/* <div className={styles.tpSlider2Shape}>
                 <Image className={styles.tpSlider2Shape1} src={slider_shape} alt="slider_shape" />
               </div> */}
-              <div className="row align-items-center px-5">
+              <div className="row align-items-center mx-1">
                 <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
                   <div className={styles.tpSliderContent2}>
                     <span>{item.subtitle}</span>

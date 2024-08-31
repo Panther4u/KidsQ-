@@ -213,13 +213,12 @@
     }
     &-title{
         @extend %tp-ff-roboto;
-        font-weight: 800;
-        font-size: 54px;
-        line-height: 1.15;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 1.29;
         margin-bottom: 22px;
-        color: var(--tp-common-white);
-        margin-bottom: 10px;
-        @include animation-control(.5s);
+
+
 
         @media #{$md}{
             font-size: 45px;
@@ -227,7 +226,6 @@
         @media #{$sm, $xs}{
             font-size: 35px;
         }
-
 
 
         & a{

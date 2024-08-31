@@ -212,6 +212,7 @@ textarea,
 li,
 .transition-3{
 	@extend %tp-transition-common;
+	
 }
 
 a:not([href]):not([class]), 

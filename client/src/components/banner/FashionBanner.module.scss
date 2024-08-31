@@ -1,3 +1,5 @@
+@use '../../../public/assets/scss/utils/extends' as *;
+
 .tp-slider-area {
     position: relative;
     z-index: 1;
@@ -193,7 +195,7 @@
       span {
         display: block;
         margin-bottom: 10px;
-
+        font-family: var(--tp-ff-roboto);
         @media (max-width: 576px) {
           font-size: 14px; // Adjust for mobile devices
         }
@@ -202,7 +204,7 @@
       h3 {
         font-size: 36px;
         margin-bottom: 20px;
-  
+        font-family: var(--tp-ff-fontawesome);
         @media (max-width: 768px) {
           font-size: 28px; // Adjust for smaller screens
         }
@@ -229,6 +231,7 @@
   
     .tpSliderBtn2 {
       margin-top: 15px;
+      font-family: var(--tp-ff-roboto);
 
       .btn {
         padding: 3px 8px;
@@ -238,6 +241,7 @@
         display: inline-block;
         transition: all 0.3s;
         font-size: 12x;
+        
 
         &:hover {
           background-color: #333;
