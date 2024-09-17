@@ -131,7 +131,7 @@ const ProductItem = ({ product, style_2 = false }) => {
         <h3 className="tp-product-title-2">
           <Link  href={`/product-details/${_id}`}>{title}</Link>
         </h3>
-        <div className="tp-product-rating-icon tp-product-rating-icon-2">
+        {/* <div className="tp-product-rating-icon tp-product-rating-icon-2">
           <Rating allowFraction size={16} initialValue={ratingVal} readonly={true} />
         </div>
         <div className="tp-product-price-wrapper-2">
@@ -149,7 +149,7 @@ const ProductItem = ({ product, style_2 = false }) => {
               ₹{price.toFixed(2)}
             </span>
           )}
-        </div>
+        </div> */}
       </div>
     </div>
   );

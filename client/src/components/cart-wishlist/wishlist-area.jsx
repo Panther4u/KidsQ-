@@ -23,8 +23,8 @@ const WishlistArea = () => {
                     <thead>
                       <tr>
                         <th colSpan="2" className="tp-cart-header-product">Product</th>
-                        <th className="tp-cart-header-price">Price</th>
-                        <th className="tp-cart-header-quantity">Quantity</th>
+                        {/* <th className="tp-cart-header-price">Price</th>
+                        <th className="tp-cart-header-quantity">Quantity</th> */}
                         <th>Action</th>
                         <th></th>
                       </tr>
@@ -36,7 +36,7 @@ const WishlistArea = () => {
                     </tbody>
                   </table>
                 </div>
-                <div className="tp-cart-bottom">
+                {/* <div className="tp-cart-bottom">
                   <div className="row align-items-end">
                     <div className="col-xl-6 col-md-4">
                       <div className="tp-cart-update">
@@ -44,7 +44,7 @@ const WishlistArea = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           }

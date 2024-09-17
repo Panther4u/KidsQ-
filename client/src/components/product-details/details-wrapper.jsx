@@ -254,7 +254,7 @@ const DetailsWrapper = ({ productItem, handleImageActive, activeImg, detailsBott
       <h3 className="tp-product-details-title">{title}</h3>
 
       {/* inventory details */}
-      <div className="tp-product-details-inventory d-flex align-items-center mb-10">
+      {/* <div className="tp-product-details-inventory d-flex align-items-center mb-10">
         <div className="tp-product-details-stock mb-10">
           <span>{status}</span>
         </div>
@@ -266,13 +266,13 @@ const DetailsWrapper = ({ productItem, handleImageActive, activeImg, detailsBott
             <span>({reviews && reviews.length > 0 ? reviews.length : 0} Review)</span>
           </div>
         </div>
-      </div>
+      </div> */}
       <p>{textMore ? description : `${description.substring(0, 100)}...`}
         <span onClick={() => setTextMore(!textMore)}>{textMore ? 'See less' : 'See more'}</span>
       </p>
 
       {/* price */}
-      <div className="tp-product-details-price-wrapper mb-20">
+      {/* <div className="tp-product-details-price-wrapper mb-20">
         {discount > 0 ? (
           <>
             <span className="tp-product-details-price old-price">₹{price}</span>
@@ -283,7 +283,7 @@ const DetailsWrapper = ({ productItem, handleImageActive, activeImg, detailsBott
         ) : (
           <span className="tp-product-details-price new-price">₹{price.toFixed(2)}</span>
         )}
-      </div>
+      </div> */}
 
       {/* variations */}
       {imageURLs.some(item => item?.color && item?.color?.name) && <div className="tp-product-details-variation">

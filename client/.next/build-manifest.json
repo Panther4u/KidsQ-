@@ -27,10 +27,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/shop-category": [
+    "/product-details/[id]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/shop-category.js"
+      "static/chunks/pages/product-details/[id].js"
+    ],
+    "/wishlist": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/wishlist.js"
     ]
   },
   "ampFirstPages": []

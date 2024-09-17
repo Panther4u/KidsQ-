@@ -41,7 +41,7 @@ const ProductItem = ({ product, prdCenter = false,primary_style=false }) => {
         {/* product action */}
         <div className="tp-product-action-3 tp-product-action-blackStyle">
           <div className="tp-product-action-item-3 d-flex flex-column">
-            {isAddedToCart ? (
+            {/* {isAddedToCart ? (
               <Link
                 href="/cart"
                 className={`tp-product-action-btn-3 ${isAddedToCart?'active':''} tp-product-add-cart-btn text-center`}
@@ -59,7 +59,7 @@ const ProductItem = ({ product, prdCenter = false,primary_style=false }) => {
                 <Cart />
                 <span className="tp-product-tooltip">Add to Cart</span>
               </button>
-            )}
+            )} */}
             <button
               onClick={() => dispatch(handleProductModal(product))}
               className="tp-product-action-btn-3 tp-product-quick-view-btn"
@@ -77,7 +77,7 @@ const ProductItem = ({ product, prdCenter = false,primary_style=false }) => {
           </div>
         </div>
 
-        <div className="tp-product-add-cart-btn-large-wrapper">
+        {/* <div className="tp-product-add-cart-btn-large-wrapper">
           {isAddedToCart ? (
             <Link
               href="/cart"
@@ -95,7 +95,7 @@ const ProductItem = ({ product, prdCenter = false,primary_style=false }) => {
               Add To Cart
             </button>
           )}
-        </div>
+        </div> */}
       </div>
       <div className="tp-product-content-3">
         <div className="tp-product-tag-3">
@@ -104,9 +104,9 @@ const ProductItem = ({ product, prdCenter = false,primary_style=false }) => {
         <h3 className="tp-product-title-3">
           <Link href={`/product-details/${_id}`}>{title}</Link>
         </h3>
-        <div className="tp-product-price-wrapper-3">
+        {/* <div className="tp-product-price-wrapper-3">
           <span className="tp-product-price-3">₹{price.toFixed(2)}</span>
-        </div>
+        </div> */}
       </div>
     </div>
   );
