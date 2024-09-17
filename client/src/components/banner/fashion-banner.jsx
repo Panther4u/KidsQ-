@@ -139,11 +139,11 @@ const slider_setting = {
 
 const FashionBanner = () => {
   return (
-    <section style={{ position: 'relative', width: '100%', height: '300px', overflow: 'hidden' }} className='my-3'>
+    <section style={{ position: 'relative', width: '100%', height: '50vh', overflow: 'hidden' }} className='my-3'>
       <Swiper {...slider_setting} modules={[Pagination, Navigation, EffectFade, Autoplay]} className="tpSliderActive2">
         {slider_data.map((item) => (
           <SwiperSlide key={item.id}>
-            <div style={{ position: 'relative', width: '100%', height: '300px' }}>
+            <div style={{ position: 'relative', width: '100%', height: '50vh' }}>
                   <div style={{ position: 'relative', width: '100%', height: '100%', textAlign: 'end' }}>
                     <video
                       src={item.video}
@@ -154,7 +154,7 @@ const FashionBanner = () => {
                       style={{
                         objectFit: 'cover',
                         width: '100%',
-                        height: '300px',
+                        height: '100%',
                         position: 'absolute',
                         top: 0,
                         left: 0,
