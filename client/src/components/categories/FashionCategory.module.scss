@@ -1,0 +1,92 @@
+.fashionCategorySection {
+    margin-top: 20px;
+  }
+  
+  .fashionCategoryGrid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around; // Center items in the grid
+  }
+  
+  .fashionCategoryItem {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 120px;
+    height: auto;
+    margin: 0; // Center items horizontally
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .fashionCategoryImage {
+    width: 100%;
+    aspect-ratio: 1; // Maintains a square aspect ratio
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%; // Makes the image round
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgb(255, 255, 255);
+  }
+  
+  .fashionCategoryContent {
+    text-align: center;
+  }
+  
+  .fashionCategoryTitle {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+  
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+  
+  .fashionCategoryBtn {
+    a {
+      display: inline-block;
+      font-size: 8px;
+      color: #333;
+      text-decoration: none;
+      transition: 0.3s;
+  
+      &:hover {
+        color: #ff0000;
+      }
+  
+      svg {
+        margin-left: 8px;
+      }
+    }
+  }
+  
+  // Media query for screens smaller than 600px
+  @media (max-width: 600px) {
+    .fashionCategoryGrid {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between; // Center items in the grid
+      }
+    .fashionCategoryItem {
+      width: 80px; // Adjust width for smaller screens
+    }
+  
+    .fashionCategoryTitle {
+      font-size: 8px; // Smaller font size for smaller screens
+    }
+  
+    .fashionCategoryBtn {
+      a {
+        font-size: 6px; // Smaller font size for smaller screens
+      }
+    }
+  }
+  
+  

@@ -7,7 +7,7 @@ import { HomeTwoPrdLoader } from '@/components/loader';
 import styles from './ProductArea.module.scss'; // Import the SCSS module
 
 // tabs
-const tabs = ["All Collection", "Regular Uniforms", "Sports Uniforms", "Accessories"];
+const tabs = ["All Collection", "Regular Uniforms", "Sports Uniforms", "Accessories", "Fabric"];
 
 const ProductArea = () => {
   const [activeTab, setActiveTab] = useState(tabs[0]);
@@ -40,6 +40,8 @@ const ProductArea = () => {
       product_items = products.data.filter(p => p.category.name === 'Sports Uniforms');
     } else if (activeTab === 'Accessories') {
       product_items = products.data.filter(p => p.category.name === 'Accessories');
+    } else if (activeTab === 'Fabric') {
+      product_items = products.data.filter(p => p.category.name === 'Fabric');
     } else {
       product_items = products.data;
     }

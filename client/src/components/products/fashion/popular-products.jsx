@@ -134,7 +134,7 @@ const PopularProducts = () => {
                   Shop by Popular
                   <TextShapeLine />
                 </span>
-                <h3 className="tp-section-title-2">
+                <h3 className="tp-section-title-2 ">
                   Popular on the <Image src={logo} alt="logo" priority height={50}  width={150}/> store.
                 </h3>
               </div>

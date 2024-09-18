@@ -1281,7 +1281,7 @@ const products = [
   {
     _id: "64215fb702240f90b1138e14",
     sku: "FBB7SDVX45",
-    img: "https://i.ibb.co/xXHLYZr/clothing-5.png",
+    img: "https://i.ibb.co/r2tmjcG/1689414147952-4336-product-8.jpg",
     title: "Boys Graphic T-Shirt",
     slug: "boys-graphic-t-shirt",
     unit: "12pcs",
@@ -1924,6 +1924,112 @@ const products = [
     ],
     featured: true,
     sellCount: 2
+  },
+  {
+    _id: "64250d8e253d81bc860d4d26",
+    sku: "DCB7SDVX60",
+    img: "https://i.ibb.co/F491rQZ/Pakistan-Green.jpg",
+    title: "SPRINT 240",
+    slug: "sprint-240",
+    unit: "2pcs",
+    imageURLs: [
+      {
+        color: {
+          name: "Real Orange",
+          clrCode: "#FFA500"
+        },
+        img: "https://i.ibb.co/tHCJMx7/Real-Orange.jpg"
+      },
+      {
+        color: {
+          name: "Pakistan Green",
+          clrCode: "#006600"
+        },
+        img: "https://i.ibb.co/F491rQZ/Pakistan-Green.jpg"
+      },
+      {
+        color: {
+          name: "Imperial Blue",
+          clrCode: "#002395"
+        },
+        img: "https://i.ibb.co/rxvfW51/Imperial-Blue.jpg"
+      },
+      {
+        color: {
+          name: "Flame Red",
+          clrCode: "#cf352e"
+        },
+        img: "https://i.ibb.co/pzcT2QH/Flame-Red.jpg"
+      },
+      {
+        color: {
+          name: "Dark Navy",
+          clrCode: "#000435"
+        },
+        img: "https://i.ibb.co/LhTDgTT/Dark-Navy.jpg"
+      },
+      {
+        color: {
+          name: "Chrome-Yellow",
+          clrCode: "#ffa700"
+        },
+        img: "https://i.ibb.co/Gv8j2XJ/Chrome-Yellow.jpg"
+      },
+      {
+        color: {
+          name: "Black",
+          clrCode: "#000000"
+        },
+        img: "https://i.ibb.co/zFcdLtY/Black.jpg"
+      },
+    ],
+    parent: "Fabric",
+    children: "Material",
+    price: 50,
+    discount: 0,
+    quantity: 15,
+    brand: {
+      name: "Pranera Textiles",
+      id: "642508be253d81bc860d4d24"
+    },
+    category: {
+      name: "Fabric",
+      id: "64200a9f12b74c8d3abeae43"
+    },
+    status: "in-stock",
+    // reviews: [
+    //   ""
+    // ],
+    productType: "fashion",
+    description: "The fabric colors you see on our website can vary in person due to the color variations of each photograph and each computer screen. Multiple factors can affect color display, none of which we have any control of.",
+    additionalInformation: [
+      {
+        key: "Composition",
+        value: "100% Polyester"
+      },
+      {
+        key: "Width",
+        value: "TUBE 36"
+      },
+      {
+        key: "Structure",
+        value: "Design"
+      },
+      {
+        key: "Pattern",
+        value: "Solid"
+      },
+      {
+        key: "Knit",
+        value: "Interlock"
+      }
+    ],
+    tags: [
+      "sprint-240"
+    ],
+    featured: true,
+    sellCount: 4,
+    sizes: []
   },
   // {
   //   _id: "64250d8e253d81bc860d4d26",

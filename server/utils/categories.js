@@ -128,6 +128,20 @@ const categories = [
     ],
     status: "Show"
   },
+  {
+    _id: "64200a9f12b74c8d3abeae43",
+    img: "https://i.ibb.co/7zk96H6/Pakistan-Green.jpg",
+    parent: "Fabric",
+    children: [
+      "Material"
+    ],
+    productType: "fashion",
+    products: [
+      "64250d8e253d81bc860d4d26",
+      
+    ],
+    status: "Show"
+  },
   // {
   //   _id: "64240b66253d81bc860d4cf2",
   //   img: "https://i.ibb.co/7yg7yg9/beauty-category-1.jpg",
