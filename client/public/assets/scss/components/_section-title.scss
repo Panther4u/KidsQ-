@@ -59,7 +59,10 @@
         font-size: 44px;
         
         @media #{$xs}{
-            font-size: 35px;
+            font-size: 20px;
+        }
+        @media #{$md}{
+            font-size: 28px;
         }
     }
     &-title-pre-2{
@@ -69,6 +72,12 @@
         position: relative;
         z-index: 1;
         display: inline-block;
+        @media #{$xs}{
+            font-size: 14px;
+        }
+        @media #{$md}{
+            font-size: 15px;
+        }
         & svg{
             position: absolute;
             bottom: -8px;

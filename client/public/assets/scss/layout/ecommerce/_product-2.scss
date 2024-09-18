@@ -135,6 +135,13 @@
             border-radius: 50%;
             margin-bottom: 6px;
 
+
+            @media #{$xs}{
+                width: 32px;
+                height: 32px;
+                font-size: 10px;
+                line-height: 32px;
+            }
             & svg{
                 @extend %tp-svg-y-1;
             }

@@ -79,6 +79,27 @@
     }
   
     .fashionCategoryTitle {
+      font-size: 9px; // Smaller font size for smaller screens
+    }
+  
+    .fashionCategoryBtn {
+      a {
+        font-size: 6px; // Smaller font size for smaller screens
+      }
+    }
+  }
+  @media (max-width: 370px) {
+    .fashionCategoryGrid {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between; // Center items in the grid
+      }
+    .fashionCategoryItem {
+      width: 65px; // Adjust width for smaller screens
+    }
+  
+    .fashionCategoryTitle {
       font-size: 8px; // Smaller font size for smaller screens
     }
   

@@ -32,19 +32,12 @@ const ProductArea = () => {
   }
   if (!isLoading && !isError && products?.data?.length > 0) {
     let product_items = products.data;
-    if (activeTab === 'All Collection') {
-      product_items = products.data;
-    } else if (activeTab === 'Regular Uniforms') {
-      product_items = products.data.filter(p => p.category.name === 'Regular Uniforms');
-    } else if (activeTab === 'Sports Uniforms') {
-      product_items = products.data.filter(p => p.category.name === 'Sports Uniforms');
-    } else if (activeTab === 'Accessories') {
-      product_items = products.data.filter(p => p.category.name === 'Accessories');
-    } else if (activeTab === 'Fabric') {
-      product_items = products.data.filter(p => p.category.name === 'Fabric');
-    } else {
-      product_items = products.data;
+
+    // Filter products based on the active tab
+    if (activeTab !== 'All Collection') {
+      product_items = products.data.filter((p) => p.category.name === activeTab);
     }
+
     content = (
       <>
         <div className="row">
@@ -67,9 +60,14 @@ const ProductArea = () => {
             </div>
           </div>
         </div>
+
+        {/* Show all products in a proper grid */}
         <div className="row">
           {product_items.map((prd) => (
-            <div key={prd._id} className={`g-1 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 ${styles.productItem}`}>
+            <div
+              key={prd._id}
+              className={`col-xl-3 col-lg-4 col-md-6 col-sm-6  col-6 ${styles.productItem}`} // Ensures proper layout
+            >
               <ProductItem product={prd} />
             </div>
           ))}

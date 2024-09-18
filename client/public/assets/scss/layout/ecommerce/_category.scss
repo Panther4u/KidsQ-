@@ -169,7 +169,8 @@
         }
     }
     &-thumb-2{
-        background-color: #F2F3F5;
+        background-color: transparent;
+        border-radius: 5px;
         & a{
             display: block;
         }

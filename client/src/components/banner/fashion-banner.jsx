@@ -100,9 +100,9 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, EffectFade, Navigation, Autoplay } from 'swiper';
-import slider_video_1 from '@assets/videos/slider-video-3.mp4'; 
-import slider_video_2 from '@assets/videos/slider-video-2.mp4';
-import slider_video_3 from '@assets/videos/slider-video-3.mp4';
+import slider_video_1 from '@assets/videos/slider-video-1.mp4'; 
+import slider_video_2 from '@assets/videos/slider-video-1.mp4';
+import slider_video_3 from '@assets/videos/slider-video-1.mp4';
 
 const slider_data = [
   {

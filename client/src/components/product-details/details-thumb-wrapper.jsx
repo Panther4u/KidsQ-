@@ -129,6 +129,8 @@
 
 
 
+
+
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import PopupVideo from "../common/popup-video";
@@ -143,49 +145,61 @@ const DetailsThumbWrapper = ({
   status,
 }) => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const [visibleImages, setVisibleImages] = useState(imageURLs.slice(0, 4)); 
   const [startIndex, setStartIndex] = useState(0);
+  const [visibleImages, setVisibleImages] = useState(imageURLs.slice(0, 4));
   const [currentImgHeight, setCurrentImgHeight] = useState(imgHeight);
 
+  // Adjust image height based on screen size
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 576) {
-        setCurrentImgHeight(400); // Reduce image height on smaller screens
+        setCurrentImgHeight(400);
       } else {
-        setCurrentImgHeight(imgHeight); // Default image height on larger screens
+        setCurrentImgHeight(imgHeight);
       }
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Initialize on mount
+    handleResize();
 
     return () => window.removeEventListener("resize", handleResize);
   }, [imgHeight]);
 
+  // Update visible images based on the startIndex
   useEffect(() => {
     if (imageURLs.length <= 4) {
-      setVisibleImages(imageURLs); 
+      setVisibleImages(imageURLs);
       return;
     }
-
-    const interval = setInterval(() => {
-      const nextIndex = (startIndex + 1) % imageURLs.length;
-      setStartIndex(nextIndex);
-      const newVisibleImages = imageURLs.slice(nextIndex, nextIndex + 4);
-      if (newVisibleImages.length < 4) {
-        setVisibleImages([...newVisibleImages, ...imageURLs.slice(0, 4 - newVisibleImages.length)]);
-      } else {
-        setVisibleImages(newVisibleImages);
-      }
-    }, 5000); 
-
-    return () => clearInterval(interval);
+    const newVisibleImages = imageURLs.slice(startIndex, startIndex + 4);
+    if (newVisibleImages.length < 4) {
+      setVisibleImages([
+        ...newVisibleImages,
+        ...imageURLs.slice(0, 4 - newVisibleImages.length),
+      ]);
+    } else {
+      setVisibleImages(newVisibleImages);
+    }
   }, [startIndex, imageURLs]);
+
+  // Handle up and down arrow clicks
+  const handlePrevClick = () => {
+    const newIndex = startIndex - 1 < 0 ? imageURLs.length - 1 : startIndex - 1;
+    setStartIndex(newIndex);
+  };
+
+  const handleNextClick = () => {
+    const newIndex = (startIndex + 1) % imageURLs.length;
+    setStartIndex(newIndex);
+  };
 
   return (
     <>
       <div className="tp-product-details-thumb-wrapper">
         <nav className="nav-wrapper">
+          <button className="prev-arrow" onClick={handlePrevClick}>
+            &uarr;
+          </button>
           <div className="nav nav-tabs">
             {visibleImages.map((item, i) => (
               <button
@@ -198,12 +212,20 @@ const DetailsThumbWrapper = ({
                   alt={`Thumbnail ${i + 1}`}
                   width={78}
                   height={100}
-                  style={{ width: "100%", height: "100%", borderRadius: "4px" , margin: "0px"}} // Apply border-radius to thumbnails
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "4px",
+                  }}
                 />
               </button>
             ))}
           </div>
+          <button className="next-arrow" onClick={handleNextClick}>
+            &darr;
+          </button>
         </nav>
+
         <div className="tab-content m-img">
           <div className="tab-pane fade show active">
             <div className="tp-product-details-nav-main-thumb p-relative">
@@ -211,7 +233,7 @@ const DetailsThumbWrapper = ({
                 src={activeImg}
                 alt="Product Image"
                 width={imgWidth}
-                height={currentImgHeight} // Use the responsive height
+                height={currentImgHeight}
                 style={{ borderRadius: "5px" }}
               />
               <div className="tp-product-badge">
@@ -253,42 +275,64 @@ const DetailsThumbWrapper = ({
         }
 
         .nav-wrapper {
-          flex-shrink: 0;
-        }
-
-        .nav-tabs {
-          width: 100%;
           display: flex;
           flex-direction: column;
           align-items: center;
-          justify-content: center;
-          gap: 2px;
+          gap: 16px;
+        }
+
+        .nav-tabs {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .prev-arrow,
+        .next-arrow {
+          cursor: pointer;
+        }
+
+        .prev-arrow {
+          margin-bottom: 8px;
+        }
+
+        .next-arrow {
+          margin-top: 8px;
         }
 
         .tp-product-details-nav-main-thumb {
           max-width: 100%;
-          
         }
 
         @media (max-width: 576px) {
           .tp-product-details-thumb-wrapper {
             flex-direction: column;
             align-items: center;
-            margin: 0px;
           }
 
           .nav-wrapper {
             order: 2;
-            margin-top: 16px;
+            flex-direction: row;
+            justify-content: center;
           }
 
           .nav-tabs {
             flex-direction: row;
-            justify-content: end;
+            width: 100%;
           }
 
-          .tp-product-details-nav-main-thumb {
-            width: 100%;
+          .prev-arrow,
+          .next-arrow {
+            margin-bottom: 0;
+            width: 20px;
+            height: 20px;
+          }
+
+          .prev-arrow {
+
+          }
+
+          .next-arrow {
 
           }
         }
