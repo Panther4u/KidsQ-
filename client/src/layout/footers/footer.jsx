@@ -15,7 +15,7 @@ const Footer = ({ style_2 = false, style_3 = false,primary_style=false }) => {
         <div className="tp-footer-top pt-95 pb-40">
           <div className="container">
             <div className="row">
-              <div className="col-xl-4 col-lg-3 col-md-4 col-sm-6">
+              <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6">
                 <div className="tp-footer-widget footer-col-1 mb-50">
                   <div className="tp-footer-widget-content">
                     <div className="tp-footer-logo">
@@ -23,7 +23,7 @@ const Footer = ({ style_2 = false, style_3 = false,primary_style=false }) => {
                         <Image src={logo} alt="logo" height={60}  width={140} />
                       </Link>
                     </div>
-                    <p className="tp-footer-desc">We are a dynamic team of full stack developers and designers crafting high-quality web applications</p>
+                    {/* <p className="tp-footer-desc text-sm">We are a dynamic team of full stack developers and designers crafting high-quality web applications</p> */}
                     <div className="tp-footer-social">
                       {social_data.map(s => <a href={s.link} key={s.id} target="_blank">
                         <i className={s.icon}></i>
@@ -33,7 +33,7 @@ const Footer = ({ style_2 = false, style_3 = false,primary_style=false }) => {
                   </div>
                 </div>
               </div>
-              <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+              <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6">
                 <div className="tp-footer-widget footer-col-2 mb-50">
                   <h4 className="tp-footer-widget-title">My Account</h4>
                   <div className="tp-footer-widget-content">
@@ -48,7 +48,7 @@ const Footer = ({ style_2 = false, style_3 = false,primary_style=false }) => {
                   </div>
                 </div>
               </div>
-              <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+              {/* <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                 <div className="tp-footer-widget footer-col-3 mb-50">
                   <h4 className="tp-footer-widget-title">Information</h4>
                   <div className="tp-footer-widget-content">
@@ -62,8 +62,8 @@ const Footer = ({ style_2 = false, style_3 = false,primary_style=false }) => {
                     </ul>
                   </div>
                 </div>
-              </div>
-              <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+              </div> */}
+              <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6">
                 <div className="tp-footer-widget footer-col-4 mb-50">
                   <h4 className="tp-footer-widget-title">Talk To Us</h4>
                   <div className="tp-footer-widget-content">
@@ -79,7 +79,7 @@ const Footer = ({ style_2 = false, style_3 = false,primary_style=false }) => {
                           </span>
                         </div>
                         <div className="tp-footer-contact-content">
-                          <p><a href="mailto:shofy@support.com">swe.hamedhasan@gmail.com</a></p>
+                          <p><a href="mailto:shofy@support.com">kidsquniforms@gmail.com</a></p>
                         </div>
                       </div>
                       <div className="tp-footer-contact-item d-flex align-items-start">
@@ -101,24 +101,13 @@ const Footer = ({ style_2 = false, style_3 = false,primary_style=false }) => {
         </div>
         <div className="tp-footer-bottom">
           <div className="container">
-            <div className="tp-footer-bottom-wrapper">
-              <div className="row align-items-center">
-                <div className="col-md-6">
+            <div className="tp-footer-bottom-wrapper text-center">
                   <div className="tp-footer-copyright">
                     <p>© {new Date().getFullYear()} All Rights Reserved  by Unicoderr
                       <Link href="/">{" "}❤</Link>.
                     </p>
                   </div>
                 </div>
-                {/* <div className="col-md-6">
-                  <div className="tp-footer-payment text-md-end">
-                    <p>
-                      <Image src={pay} alt="pay" />
-                    </p>
-                  </div>
-                </div> */}
-              </div>
-            </div>
           </div>
         </div>
       </div>

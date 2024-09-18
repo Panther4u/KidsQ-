@@ -217,7 +217,7 @@ const TrendingProducts = () => {
             More to Discover
             <TextShapeLine />
           </span>
-          <h3 className="tp-section-title-2">Trending Arrivals</h3>
+          <h3 className="tp-section-title-2">Design your own custom T-shirts</h3>
         </div>
         <div style={containerStyle}>
           <div style={imageContainerStyle}>
