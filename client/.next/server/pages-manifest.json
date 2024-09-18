@@ -2,7 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/blog": "pages/blog.js",
-  "/shop-category": "pages/shop-category.js"
+  "/shop-category": "pages/shop-category.js",
+  "/shop": "pages/shop.js",
+  "/product-details/[id]": "pages/product-details/[id].js",
+  "/blog": "pages/blog.js"
 }

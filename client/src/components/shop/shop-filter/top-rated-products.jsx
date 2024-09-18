@@ -34,18 +34,18 @@ const TopRatedProducts = () => {
         </div>
         <div className="tp-shop-widget-product-content">
           <div className="tp-shop-widget-product-rating-wrapper d-flex align-items-center">
-            <div className="tp-shop-widget-product-rating">
+            {/* <div className="tp-shop-widget-product-rating">
               <Rating allowFraction size={16} initialValue={item.rating} readonly={true} />
             </div>
             <div className="tp-shop-widget-product-rating-number">
               <span>({item.rating})</span>
-            </div>
+            </div> */}
           </div>
           <h4 className="tp-shop-widget-product-title">
             <Link href={`/product-details/${item._id}`}>{item.title.substring(0,20)}...</Link>
           </h4>
           <div className="tp-shop-widget-product-price-wrapper">
-            <span className="tp-shop-widget-product-price">${item.price.toFixed(2)}</span>
+            <span className="tp-shop-widget-product-price">Rs.{item.price.toFixed(2)}</span>
           </div>
         </div>
       </div>

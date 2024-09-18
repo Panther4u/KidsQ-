@@ -90,10 +90,10 @@ const ShopListItem = ({ product }) => {
           <h3 className="tp-product-title-2">
             <Link href={`/product-details/${_id}`}>{title}</Link>
           </h3>
-          <div className="tp-product-rating-icon tp-product-rating-icon-2">
+          {/* <div className="tp-product-rating-icon tp-product-rating-icon-2">
             <Rating allowFraction size={16} initialValue={ratingVal} readonly={true} />
-          </div>
-          <div className="tp-product-price-wrapper-2">
+          </div> */}
+          {/* <div className="tp-product-price-wrapper-2">
             {discount > 0 ? (
               <>
                 <span className="tp-product-price-2 new-price">₹{price}</span>
@@ -104,15 +104,15 @@ const ShopListItem = ({ product }) => {
             ) : (
               <span className="tp-product-price-2 new-price">₹{price}</span>
             )}
-          </div>
+          </div> */}
           <p>
             {description.substring(0, 100)}
           </p>
-          <div className="tp-product-list-add-to-cart">
+          {/* <div className="tp-product-list-add-to-cart">
             <button onClick={() => handleAddProduct(product)} className="tp-product-list-add-to-cart-btn">
               Add To Cart
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
