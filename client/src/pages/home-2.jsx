@@ -32,8 +32,8 @@ const HomeTwo = () => {
       <ProductBanner/>
        <NewArrivals/>
       <ProductSmArea/>
-      <BlogArea/>
-      <InstagramArea/>
+      {/* <BlogArea/> */}
+      {/* <InstagramArea/> */}
       <CtaArea/>
       <Footer/>
     </Wrapper>

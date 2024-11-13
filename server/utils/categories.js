@@ -84,17 +84,19 @@ const categories = [
     img: "https://i.ibb.co/ZWfqMXs/fashion-cat-1.jpg",
     parent: "Regular Uniforms",
     children: [
-      "Men's",
-      "Women's",
-      "Baby"
+      "Uniform"
     ],
     productType: "fashion",
     products: [
       "6421258288fba3e101965dc3",
       "64215fb702240f90b1138e14",
       "6421650a02240f90b1138e1e",
-      "642287e951820d9c45c9127c",
-      "64228862253d81bc860d2092"
+      "642168b402240f90b1138e86",
+      "64216b0902240f90b1138e8e",
+      "64216e2f02240f90b1138e96",
+      "6421700802240f90b1138e9e",
+      "64228862253d81bc860d2092",
+      "6426a68a253d81bc860d5ea6"
     ],
     status: "Show"
   },
@@ -103,13 +105,13 @@ const categories = [
     img: "https://i.ibb.co/GsDLfnh/fashion-cat-2.jpg",
     parent: "Sports Uniforms",
     children: [
-      "HandBag",
-      "Traveling Bag"
+      "S-Uniform"
     ],
     productType: "fashion",
     products: [
-      "642168b402240f90b1138e86",
-      "64216b0902240f90b1138e8e"
+      "6426b217253d81bc860d6217",
+      "6431364df5a812bd37e765ac",
+      "6426adba253d81bc860d6132"
     ],
     status: "Show"
   },
@@ -130,7 +132,7 @@ const categories = [
   },
   {
     _id: "64200a9f12b74c8d3abeae43",
-    img: "https://i.ibb.co/7zk96H6/Pakistan-Green.jpg",
+    img: "https://i.ibb.co/TkmgY7m/Pakistan-Green.jpg",
     parent: "Fabric",
     children: [
       "Material"
@@ -138,7 +140,9 @@ const categories = [
     productType: "fashion",
     products: [
       "64250d8e253d81bc860d4d26",
-      
+      "642515c0253d81bc860d4da3",
+      "64251bc0253d81bc860d4db5",
+      "64252172253d81bc860d4dbe"
     ],
     status: "Show"
   },

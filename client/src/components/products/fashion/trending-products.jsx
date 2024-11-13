@@ -255,6 +255,11 @@ const TrendingProducts = () => {
             text-align: center;
           }
         }
+        @media (max-width: 2560px) {
+          .tp-section-title-wrapper-2 {
+            text-align: center;
+          }
+        }
       `}</style>
     </>
   );
