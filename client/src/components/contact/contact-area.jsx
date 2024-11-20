@@ -39,7 +39,8 @@ const ContactArea = () => {
                         <a href="mailto:info@gmail.com">info@gmail.com</a>
                       </p>
                       <p data-info="phone">
-                        <a href="tel:670-413-90-762">+(91)866 805 4205</a>
+                        <a href="tel:670-413-90-762">+(91)83448 88488</a><br/>
+                        <a href="tel:670-413-90-762">+(91)96262 61656</a>
                       </p>
                     </div>
                   </div>
@@ -55,7 +56,9 @@ const ContactArea = () => {
                           href="https://www.google.com/maps/place/New+York,+NY,+USA/@40.6976637,-74.1197638,11z/data=!3m1!4b1!4m6!3m5!1s0x89c24fa5d33f083b:0xc80b8f06e177fe62!8m2!3d40.7127753!4d-74.0059728!16zL20vMDJfMjg2"
                           target="_blank"
                         >
-                          84 main Street, <br /> Tirupur, Tamilnadu-600 000.
+                          Shop No:1/15/C4, A.Kurumbalayam,
+Avinashi to Sevur Main road, Vettuvapalayam Village, Tirupur Dt.
+Avinashi Tk - 641655
                         </a>
                       </p>
                     </div>
